@@ -2,8 +2,8 @@
 #include <PubSubClient.h> // Adciona a Biblioteca que Permite que o ESP conecte a o MQTT
 
 // WiFi
-const char *ssid = "192.168.0.110"; // Cria a variavel ssid onde sera armarzenado o nome do WIFI que o ESP se conectara
-const char *password = "Jif92hc!";  // Cria a variavel password onde sera armarzenado a sebga do WIFI que o ESP se conectara
+const char *ssid = "1"; // Cria a variavel ssid onde sera armarzenado o nome do WIFI que o ESP se conectara
+const char *password = "";  // Cria a variavel password onde sera armarzenado a sebga do WIFI que o ESP se conectara
 
 // MQTT Broker
 const char *mqtt_broker = "mqtt-dashboard.com"; // Cria a variavel mqtt_broker onde fica armazenado o URL do Broker
