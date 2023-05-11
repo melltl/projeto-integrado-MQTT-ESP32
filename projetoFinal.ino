@@ -57,6 +57,7 @@ void setup() {
   }
 
   client.publish(topic, "Ola Aqui e o ESP"); // Publica no topico defino A mesagem Ola Null/ESP
+  client.subscribe(topic);
   
 }
 
@@ -92,9 +93,9 @@ void enviaReed() {
   int reedSwitchState = digitalRead(reed);  // Lê o valor do pino do sensor de efeito reed switch
   if (reedSwitchState == HIGH) {                     // Se o interruptor foi acionado
 
-     client.publish("casa/temperatura", "conectado");
+     client.publish("casa/reed", "conectado");
   } else {  
-    client.publish("casa/temperatura", "desconectado");
+    client.publish("casa/reed", "desconectado");
    
    
   }
@@ -105,9 +106,9 @@ void enviaPir(){
   int pirState = digitalRead(pir);  // lê o valor do pino do sensor PIR
   if (pirState == HIGH) {              // se o sensor detectou movimento
    
-   client.publish("casa/temperatura", "Movimento detectado!");
+   client.publish("casa/pir", "Movimento detectado!");
   } else {                       
-     client.publish("casa/temperatura", "Desligado");
+     client.publish("casa/pir", "Desligado");
   }
   
  }
